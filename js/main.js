@@ -113,7 +113,7 @@ slideCharImg.forEach((img) => {
         let img = document.querySelector('.characters-data .characters-img img').getAttribute('src');
         parseInt(localStorage.setItem('img' ,img));
         } else if (document.querySelector('.characters-data .characters-img img').hasAttribute('src) == true){
-             
+             document.querySelector('.characters-data .characters-img img').setAttribute('src','images/layer1.png');
             /* If container div have image change it src to selected image */
             document.querySelector('.characters-data .characters-img img').getAttribute('src') = imgSrc;
         }
