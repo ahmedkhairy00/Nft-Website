@@ -1,0 +1,11 @@
+**** Revision on website by use Html and Css and JavaScript
+
+create Navbar contain logo and links
+
+create Landing Page
+
+create Gallary of web3 NFT images
+
+create about us section 
+
+create contact us section 

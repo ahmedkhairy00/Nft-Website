@@ -1,0 +1,695 @@
+/* Use Google Icons */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+/* Global Style */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Use Variable  */
+:root{
+--sectionMargin:100px auto;
+--mainColor : orangered;
+--fontSize:2rem;
+}
+ul{
+    list-style: none;
+
+}
+body {
+    font-family: 'Grape Nuts', cursive;
+}
+
+/* Class For Make display None to Block */
+.appear{
+    display: flex!important;
+}
+/* Style Header */
+header{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+/* Style Nav Bar */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: 70px;
+}
+nav .logo{
+   font-size: 22px; 
+   color: black;
+   margin-left: 20px;
+   font-weight: bold;
+}
+nav .logo img{
+width: 30px;
+height: 30px;
+}
+nav ul{
+    display: flex;
+    margin: 0 60px;
+    align-items: center;
+
+
+}
+nav ul #close{
+    display: none;
+}
+nav ul a{
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+}
+nav ul a:hover{
+transform: scale(1.1);
+}
+nav ul li{
+    padding : 0 1.5rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+header .menu-icon {
+    color:  var(--mainColor);
+    display: none;
+}
+/* Style Landing page */
+main .landing{
+    background-image:url(../images/istockphoto-1150477705-612x612.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+/* Style Setting Icon */
+main .landing .setting-icon{
+    position: absolute;
+    top: 35%;
+    left: 3px;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: fit-content;
+}
+main .landing .setting-icon span{
+color: var(--mainColor);
+cursor: pointer;
+}
+/* Style Div Contains Colors */
+main .landing .change-color{
+width: 150px;
+background-color: white;  
+position: absolute;
+top: 38%;
+left: 7px;
+border-radius: 10px;
+padding: 10px;
+display: none;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+main .landing .change-color div{
+width: 25px;
+height: 25px;
+margin: 5px;
+cursor: pointer;
+position: relative;
+}
+main .landing .change-color div:hover{
+border: 1px solid black;
+}
+
+/* Class For Toggle Change Color Div */
+.active{
+    display: flex!important;
+}
+main .landing .change-color input{
+width: 85%;
+outline: none;
+border: none;
+}
+
+main .landing .change-color button{
+width: 80%;
+outline: none;
+border: none;
+background-color: #060303;
+padding: 4px;
+border-radius: 4px;
+margin: 5px;
+cursor: pointer;
+text-transform: capitalize;
+color: white;
+font-weight: bold;
+}
+
+main .landing .text{
+    top: 50%;
+    margin-left: 120px;
+}
+main .landing .text h1{
+    color: white;
+    text-transform: capitalize;
+    font-size: 2.25rem;
+}
+main .landing .text .special{
+    color:  var(--mainColor);
+    text-transform: uppercase;
+}
+main .landing .text a{
+    margin: 10px 20px;
+    padding: 10px 35px;
+    font-weight: bold;
+    color: white;
+    font-size: 1rem;
+    background-color:  var(--mainColor);
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+main .landing .text a:hover{
+    background-color: white;
+    color:  var(--mainColor);
+    font-weight: bold;
+    font-size: 1rem;
+}
+main .landing .image{
+    max-width: 100%;
+    max-height: 100%;
+    width: 50%;
+    margin-top: 50px;
+    overflow: hidden;
+
+}
+
+/* Media query for less than 800px */
+@media (max-width: 750px){
+    header .menu-icon{
+        display: block;
+    }
+    header nav ul{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: -50px;
+    top: 50px;
+    background-color: #121212;
+    padding: 20px 40px;
+    height: 400px;
+    border-radius: 10px;
+    opacity: 0.9;
+    justify-content: space-around;
+    width: 250px;
+    text-align: center;   
+    }
+    /* Use Selector Id  */
+    nav ul #close{
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: white;
+        cursor: pointer;
+    }
+    nav ul #close:hover{
+    color: red;
+    }
+    header nav ul a{
+       color: white;
+    }
+    header nav ul a:hover{
+      color: black;
+      background-color:  var(--mainColor);
+    }
+    .landing{
+        flex-direction: column;
+        text-align: center;
+
+    }
+    .landing .text{
+        margin: 0 !important;
+        margin-top:100px !important;
+    }
+    main .landing .image{
+    width: 100%;
+    margin: unset!important;
+    }
+    main .landing .image img{
+        width:350px;
+    }
+    header .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .menu-icon{
+        display: block;
+    }
+    header .menu-icon:hover{
+     color: white;
+     cursor: pointer;
+    }
+    
+    
+}
+/* Style Gallary Section*/
+main .gallary{
+    margin: var(--sectionMargin);
+}
+.gallary h2{
+    text-align: center;
+    font-size: var(--fontSize);
+    text-transform: capitalize;
+}
+.gallary h2 span{
+color: var(--mainColor);
+}
+.gallary .container {
+    text-align: center;
+}
+.gallary .container ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+.gallary .container ul li{
+    padding: 0 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.gallary .container ul li:hover{
+color: var(--mainColor);
+}
+.click{
+    color: var(--mainColor);
+}
+
+/* Style items-filter  */
+.items-filter{
+    display: grid;
+    grid-template-columns: repeat(4 , minmax(auto,300px));
+    grid-template-rows: repeat(300px ,1fr);
+    gap: 10px 10px;
+
+}
+.items-filter img{
+    width:100%;
+    height:100%;
+    filter:none;
+ }
+.items-filter img:hover{
+    filter: grayscale(100%);
+}
+.items-filter div:nth-child(3){
+    grid-row: span 2;
+}
+.items-filter div:nth-child(5){
+    grid-column: span 2;
+}
+
+
+/* Media Query For Phones Screen  */
+@media (max-width: 476px){
+    .items-filter{
+
+     display: flex;
+     flex-direction: column;
+    }
+}
+
+/* Characters Section */
+.characters{
+    margin: var(--sectionMargin);
+    position: relative;
+}
+.characters .container{
+    position: relative;
+
+}
+
+.characters h2 {
+    text-align: center;
+    font-size: var(--fontSize);
+    text-transform: capitalize;
+    margin-bottom: 30px;
+
+}
+.characters h2 span {
+color: var(--mainColor);
+}
+.characters .slide-characters{
+position: relative;
+display: flex;
+width: 75%;
+overflow-x: hidden;
+margin: auto;
+}
+.characters .slide-characters img{
+height: 250px;
+width: 200px;
+padding: 0 5px;
+cursor: pointer;
+position: relative;
+}
+.characters .left-slide,.characters .right-slide{
+    position: absolute;
+    top: 65%;
+    transform: translateY(-50%);
+}
+.characters .left-slide span,
+.characters .right-slide span{
+    color: var(--mainColor);
+    font-size: 30px;
+    cursor: pointer;
+}
+.characters span:hover{
+color: black;
+}
+.characters .right-slide {
+right:0;
+}
+.characters .left-slide {
+    left:0;
+}
+
+/* Style Character-data */
+.characters-data{
+    margin: var(--sectionMargin);
+}
+.characters-data .container{
+display: flex;
+justify-content: space-evenly;
+}
+
+.container .characters-img {
+    display: flex;
+    justify-content: center;
+    
+}
+.characters-data .container .characters-img img{
+    height: 300px;
+    max-width: 300px;
+    border-radius: 10px;
+
+}
+.characters-data .character-data {
+padding: 0 25px;
+}
+.characters-data .character-data h3{
+font-size: 1.5rem;
+padding: 20px 0;
+}
+.characters-data .character-data h3 span{
+color: var(--mainColor);
+font-weight: bold;
+}
+.characters-data .character-data p{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Media Query for little than 476 px */
+@media (max-width : 630px){
+    .characters-data .container{
+        flex-direction: column-reverse;
+    }
+    .characters-data .character-data{
+        padding: unset;
+    }
+    .characters-data .character-data p:nth-last-of-type(){
+        font-size: 16px;
+        font-weight: bold;
+        padding-bottom: 25px;
+    }
+    .characters-data .container .characters-img img{
+    margin-top: 25px;
+    }
+}
+
+/* Style The Most Expensive NFT Section */
+.expensive-nft{
+    margin: var(--sectionMargin);
+}
+.expensive-nft h2{
+text-align: center;
+padding-bottom: 25px;
+}
+.expensive-nft h2 span{
+color: var(--mainColor);
+}
+.nft-images{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.nft-images div{
+    position: relative;
+    height: 350px;
+    width: 300px;
+    padding: 5px;
+}
+    .nft-images div img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.nft-images div h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: black;
+    color: var(--mainColor);
+    padding:8px;
+    display: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.nft-images div:hover h3{
+    display: block;
+}
+
+/* Media Query For Phones */
+@media (max-width:684px){
+    .nft-images{
+       justify-content: center;
+    }
+    .nft-images div{
+    width: 50%;
+    } 
+}
+@media (max-width:492px){
+    .nft-images div{
+        width: 100%;
+    } 
+}
+@media (max-width:1018px) and (min-width:715px){
+    .nft-images div{
+        width: 33%;
+        } 
+}
+/* Style Contact us Section */
+.contact-us{
+    margin: var(--sectionMargin);
+}
+
+.contact-us h2 {
+text-align: center;
+text-transform: uppercase;
+padding-bottom: 20px;
+}
+.contact-us h2 span{
+color: var(--mainColor);
+}
+.contact-us form{
+display: flex;
+flex-direction: column;
+}
+.contact-us form label{
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 5px 0;
+}
+.contact-us form input{
+    padding: 8px;
+    width: 400px;
+    outline: none;
+}
+.contact-us form textarea{
+    width: 400px;
+}
+
+.contact-us form button{
+    margin: 10px 0;
+    padding: 12px;
+    width: 200px;
+    color: white;
+    background-color: black;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.contact-us form button:hover{
+    background-color:var(--mainColor);
+
+}
+.contact-us .container{
+    display: flex;
+    justify-content: space-between;
+}
+.contact-us .container .contact-img img{
+width: 100%;
+height: 100%;
+}
+
+/* Media Query for Contact us section */
+@media (max-width :767px){
+    .contact-us .container{
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+    }
+    .contact-us form{
+        width: 100%;
+    }
+    .contact-us form input{
+        width: unset;
+    }
+    .contact-us form textarea{
+        width: unset;
+    }
+}
+
+/* Style Footer Section */
+footer{
+    padding:30px;
+    background-color: black;
+    color: white;
+}
+footer .container{
+    display: flex;
+    justify-content: space-around;
+}
+/* Use Mediq Query */
+@media (max-width:767px){
+    footer .container{
+     flex-direction: column;
+    }
+    footer .container div{
+     margin-bottom: 5px;
+    }
+    footer .container div:not(.social-links,.social-links div)::after{
+        position: absolute;
+        content: '';
+        width: 7%;
+        height: 2px;
+        background-color: var(--mainColor);
+        bottom: 0;
+        left: 0;
+    }
+}
+footer .container div{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+footer .container div a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 8px 0;
+}
+footer .container div a:hover:not(#my-mail){
+color: var(--mainColor);
+font-weight: bold;
+}
+footer .social-links h6{
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: var(--mainColor);
+}
+footer .social-links p {
+    padding: 5px 0;
+    color: #777;
+    font-weight: bold;
+    font-size: 18px;
+}
+footer .social-links .tel {
+    color: #777;
+    font-weight: bold;
+}
+#my-mail{
+    background-color: var(--mainColor);
+    width: fit-content;
+    padding: 5px;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+#my-mail:hover{
+background-color: white;
+color: var(--mainColor);
+}
+footer .social-links .group-links{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+footer .social-links .group-links a{
+    padding: 10px;
+    cursor: pointer;
+}
