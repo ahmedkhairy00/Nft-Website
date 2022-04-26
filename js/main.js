@@ -112,7 +112,7 @@ slideCharImg.forEach((img) => {
         document.querySelector('.characters-data .characters-img').innerHTML =`<img src="${imgSrc}">`;
         let img = document.querySelector('.characters-data .characters-img img').getAttribute('src');
         parseInt(localStorage.setItem('img' ,img));
-        } else if (document.querySelector('.characters-data .characters-img img') == true){
+        } else if (document.querySelector('.characters-data .characters-img img').hasAttribute('src) == true){
              
             /* If container div have image change it src to selected image */
             document.querySelector('.characters-data .characters-img img').getAttribute('src') = imgSrc;
