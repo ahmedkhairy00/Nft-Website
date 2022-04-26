@@ -112,8 +112,7 @@ slideCharImg.forEach((img) => {
         document.querySelector('.characters-data .characters-img').innerHTML =`<img src="${imgSrc}">`;
         let img = document.querySelector('.characters-data .characters-img img').getAttribute('src');
         parseInt(localStorage.setItem('img' ,img));
-        } else if (document.querySelector('.characters-data .characters-img img').hasAttribute('src) == true){
-             document.querySelector('.characters-data .characters-img img').setAttribute('src','images/layer1.png');
+        } else if (document.querySelector('.characters-data .characters-img img') == true){
             /* If container div have image change it src to selected image */
             document.querySelector('.characters-data .characters-img img').getAttribute('src') = imgSrc;
         }
@@ -157,7 +156,7 @@ document.documentElement.style.setProperty('--mainColor', localStorage.getItem('
 /* Reset Local Stroge When Click on Reset Button */
 let resetBtn = document.querySelector('.change-color button[type=reset]');
 resetBtn.addEventListener('click' , function(){
-    localStorage.clear();
+    localStorage.removeItem('color');
     document.location.reload(true);
 });
 
