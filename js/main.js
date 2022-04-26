@@ -157,7 +157,7 @@ document.documentElement.style.setProperty('--mainColor', localStorage.getItem('
 /* Reset Local Stroge When Click on Reset Button */
 let resetBtn = document.querySelector('.change-color button[type=reset]');
 resetBtn.addEventListener('click' , function(){
-    localStorage.removeItem('color');
+    localStorage.clear();
     document.location.reload(true);
 });
 
